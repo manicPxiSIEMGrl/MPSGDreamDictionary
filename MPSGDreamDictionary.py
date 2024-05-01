@@ -85,9 +85,9 @@ if __name__ == '__main__':
 		# Output is redirected to a file
 		sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 	argParser = argparse.ArgumentParser(add_help = True, description = "Creates a dictionary from two .txt files.")
-	argParser.add_argument('-inputFirst', action='store', help='first input file')
-	argParser.add_argument('-inputLast', action='store', help='last input file')
-	argParser.add_argument('-delimiter', choices=['','.'], help='delimiter used between the first and last dictionaries')
+	argParser.add_argument('-inputFirst', action='store', help='first input file (ex: first names)')
+	argParser.add_argument('-inputLast', action='store', help='last input file (ex: last names)')
+	argParser.add_argument('-delimiter', choices=['','.'], help='delimiter added between the first and last dictionaries. Exclude this option for none.')
 	argParser.add_argument('-outputFile', action='store' , help='output file')
 
 	#Error check empty expected items
